@@ -1,1 +1,4 @@
-Pokazowe repozytorium od nagrania 
+## Pokazowe repozytorium pod nagrania 
+## Autorzy:
+* Katarzyna Olszańska
+* Klaudia Skrzypek
