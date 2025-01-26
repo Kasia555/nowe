@@ -1,0 +1,11 @@
+{% extends "folder_aplikacji/base.html" %}
+
+{% block title %}Lista drużyn{% endblock %}
+
+{% block content %}
+<h2>Aktualnie w naszej bazie mamy poniższe drużyny:</h2>
+{% for team in teams %}
+<p><strong>{{ team.name }}</strong></p>
+<p>Miasto: {{ team.city }}</p>
+{% endfor %}
+{% endblock %}
