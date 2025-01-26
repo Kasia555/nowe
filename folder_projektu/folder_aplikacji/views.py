@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -139,3 +139,12 @@ def person_detail_html(request, id):
     return render(request,
                   "folder_aplikacji/person/detail.html",
                   {'person': person})
+
+def team_list_html(request):
+    teams = Team.objects.all()
+    return render(request, 'folder_aplikacji/team/list.html', {'teams': teams})
+
+
+def team_detail_html(request, id):
+    team = get_object_or_404(Team, id=id)
+    return render(request, 'folder_aplikacji/team/detail.html', {'team': team})
