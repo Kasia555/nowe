@@ -1,0 +1,14 @@
+{% extends "folder_aplikacji/base.html" %}
+
+{% block title %}Lista osób{% endblock %}
+
+{% block content %}
+    <h2>Aktualnie w mojej bazie dodane są poniższe osoby:</h2>
+    {% for osoba in osoby %}
+            <p><strong>Nazwisko:</strong> {{ osoba.nazwisko }}</p>
+            <p><strong>Płeć:</strong> {{ osoba.plec }}</p>
+            <p><strong>Data dodania:</strong> {{ osoba.data_dodania }}</p>
+            <hr>
+    {% endfor %}
+{% endblock %}
+
