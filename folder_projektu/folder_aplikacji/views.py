@@ -140,11 +140,11 @@ def person_detail_html(request, id):
                   "folder_aplikacji/person/detail.html",
                   {'person': person})
 
-def team_list_html(request):
-    teams = Team.objects.all()
-    return render(request, 'folder_aplikacji/team/list.html', {'teams': teams})
+def osoba_list_html(request):
+    osoby = Osoba.objects.all()  # Pobieramy wszystkie osoby
+    return render(request, 'folder_aplikacji/osoba/list.html', {'osoby': osoby})
 
-
-def team_detail_html(request, id):
-    team = get_object_or_404(Team, id=id)
-    return render(request, 'folder_aplikacji/team/detail.html', {'team': team})
+# Widok szczegółów osoby
+def osoba_detail_html(request, pk):
+    osoba = get_object_or_404(Osoba, pk=pk)  # Pobieramy osobę po jej id
+    return render(request, 'folder_aplikacji/osoba/detail.html', {'osoba': osoba})
